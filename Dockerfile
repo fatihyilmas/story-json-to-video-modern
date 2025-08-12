@@ -6,12 +6,13 @@ RUN apt-get update && apt-get install -y ffmpeg libcairo2-dev libpango1.0-dev li
 WORKDIR /app
 COPY . ./
 
-# Use a pinned pnpm via corepack to satisfy Render
-RUN corepack enable && corepack prepare pnpm@9.6.0 --activate
+# Use a pinned pnpm version 8 via corepack
+# PNPM sürümü, uyumluluk için 8 olarak değiştirildi
+RUN corepack enable && corepack prepare pnpm@8 --activate
 
 # Install and build
 RUN pnpm i --frozen-lockfile=false
-RUN chmod -R +x node_modules/.bin/  # <-- EKLENEN SATIR BU
+RUN chmod -R +x node_modules/.bin/
 RUN pnpm build
 
 # Default to starting the server (for Render Web Service)
