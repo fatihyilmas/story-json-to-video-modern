@@ -7,11 +7,11 @@ WORKDIR /app
 COPY . ./
 
 # Use a pinned pnpm version 8 via corepack
-# PNPM sürümü, uyumluluk için 8 olarak değiştirildi
 RUN corepack enable && corepack prepare pnpm@8 --activate
 
 # Install and build
-RUN pnpm i --frozen-lockfile=false
+# The new command is more robust for monorepos and compatibility issues
+RUN pnpm install -r --shamefully-hoist # <-- DEĞİŞEN SATIR BU
 RUN chmod -R +x node_modules/.bin/
 RUN pnpm build
 
