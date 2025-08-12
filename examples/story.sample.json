@@ -1,0 +1,94 @@
+{
+  "$schema": "https://example.com/sjtv.schema.json",
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "duration": 6,
+    "background": "#111"
+  },
+  "assets": [
+    {
+      "id": "bg",
+      "type": "image",
+      "src": "./examples/assets/bg.jpg"
+    },
+    {
+      "id": "vo",
+      "type": "audio",
+      "src": "./examples/assets/voiceover.mp3"
+    },
+    {
+      "id": "font-reg",
+      "type": "font",
+      "name": "Inter",
+      "src": "./examples/assets/Inter-Regular.ttf"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "main",
+      "clips": [
+        {
+          "type": "image",
+          "ref": "bg",
+          "start": 0,
+          "duration": 6,
+          "fit": "cover",
+          "transform": {
+            "scale": 1.05
+          }
+        },
+        {
+          "type": "text",
+          "text": "Merhaba D\u00fcnya!",
+          "start": 0.3,
+          "duration": 2.8,
+          "style": {
+            "fontFamily": "Inter",
+            "fontSize": 96,
+            "fill": "#fff",
+            "align": "center",
+            "shadow": {
+              "blur": 8,
+              "offsetY": 3
+            }
+          },
+          "position": {
+            "x": 540,
+            "y": 480
+          },
+          "animate": [
+            {
+              "time": 0.3,
+              "opacity": 0,
+              "y": 520
+            },
+            {
+              "time": 0.8,
+              "opacity": 1,
+              "y": 480,
+              "easing": "outCubic"
+            },
+            {
+              "time": 3.0,
+              "opacity": 1
+            },
+            {
+              "time": 3.3,
+              "opacity": 0,
+              "easing": "inCubic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "audio": [
+    {
+      "ref": "vo",
+      "start": 0,
+      "gain": -3
+    }
+  ]
+}

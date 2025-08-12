@@ -1,0 +1,8 @@
+
+> @sjtv/encoder@0.1.1 build C:\Users\Admin\Desktop\story-json-to-video-modern-main\story-json-to-video-modern-main\packages\encoder
+> tsc -p .
+
+error TS2688: Cannot find type definition file for 'node'.
+  The file is in the program because:
+    Entry point of type library 'node' specified in compilerOptions
+ ELIFECYCLE  Command failed with exit code 2.

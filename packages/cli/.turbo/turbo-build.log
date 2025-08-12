@@ -1,0 +1,7 @@
+
+> story-json-to-video@0.1.1 build C:\Users\Admin\Desktop\story-json-to-video-modern-main\story-json-to-video-modern-main\packages\cli
+> tsc -p .
+
+src/index.ts(2,1): error TS18026: '#!' can only be used at the start of a file.
+src/index.ts(2,16): error TS1005: ';' expected.
+ ELIFECYCLE  Command failed with exit code 2.

@@ -1,0 +1,15 @@
+{
+  "name": "@sjtv/renderer-canvas",
+  "version": "0.1.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "dependencies": {
+    "skia-canvas": "^2.0.2",
+    "opentype.js": "^1.3.4",
+    "@sjtv/core": "workspace:*"
+  }
+}

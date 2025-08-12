@@ -1,0 +1,17 @@
+{
+  "name": "@sjtv/server",
+  "version": "0.1.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "@sjtv/core": "workspace:*",
+    "@sjtv/renderer-canvas": "workspace:*",
+    "@sjtv/encoder": "workspace:*"
+  }
+}
