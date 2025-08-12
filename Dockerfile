@@ -1,4 +1,3 @@
-
 FROM node:20-bullseye
 
 # Install ffmpeg and build deps
@@ -12,6 +11,7 @@ RUN corepack enable && corepack prepare pnpm@9.6.0 --activate
 
 # Install and build
 RUN pnpm i --frozen-lockfile=false
+RUN chmod -R +x node_modules/.bin/  # <-- EKLENEN SATIR BU
 RUN pnpm build
 
 # Default to starting the server (for Render Web Service)
